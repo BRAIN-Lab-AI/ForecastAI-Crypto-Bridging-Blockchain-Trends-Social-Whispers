@@ -9,12 +9,16 @@
 ## Introduction
 Write 1-2 technical paragraphs (feel free to add images if you would like).
 
-With the rapid growth of cryptocurrency markets over the last decade, it has become a center of attention from both fintech enthusiasts and computer scientists due to their high volatility aand sensitivity to multifaceted drivers. Contrary to traditional assets, the prices of cryptocurrency get affected by blockchain activity, social media sentiment, and influtential individuals' opinions while also getting some influence by financial indicators. The applications of Artificial Intelligence (AI) like Machine Learning (ML) approaches have gained notoriety for this domain, specifically Deep Learning (DL) techniques, as they can model complicated nonlinear dependencies and exploit the highly dimensional data.
+The paper that I have chosen to work on is "Deep learning and NLP in cryptocurrency forecasting: Integrating financia, blockchain, and social media data" by Gurgul, Lessmann and Härdle. This paper is inspired by the recent events in the cryptocurrency world and is related to cryptocurrency forecasting using application of latest techniques.
+
+With the rapid growth of cryptocurrency markets over the last decade, it has become a center of attention for both fintech enthusiasts and computer scientists due to their high volatility and sensitivity to multifaceted drivers. Contrary to traditional assets, the prices of cryptocurrency get affected by blockchain activity, social media sentiments, and influtential individuals' opinions while also getting some influence by financial indicators. The applications of Artificial Intelligence (AI) like Machine Learning (ML) approaches have gained notoriety for this domain, specifically Deep Learning (DL) techniques, as they can model complicated nonlinear dependencies and exploit the highly dimensional data.
    
-The recent sudies have surpassed the univariate price series to multimodal approaches that integrate heterogeneous signals, for instance, blockchain data and textual sentiments (social media). Especially, techniques like transformers and advanced Natural Language Processing (NLP) models have demonstrated promising capabilities in extracting nuanced features from text and merging them with numerial predictors. With these state-of-the-art techniques, many opportunities open up to design more robust forecasting frameworks that better adapt to volatile regimes and market shocks.
+The paper mentions that the recent studies have surpassed the univariate price series to multimodal approaches that integrate heterogeneous signals, such as blockchain data and textual sentiments (social media). Especially, techniques like transformers and advanced Natural Language Processing (NLP) models have demonstrated promising capabilities in extracting nuanced features from text and merging them with numerial predictors. With these state-of-the-art techniques, many opportunities open up to design more robust forecasting frameworks that better adapt to volatile regimes and market shocks.
 
 ## Problem Statement
 Write 1-2 technical paragraphs (feel free to add images if you would like).
+
+
 
 ## Application Area and Project Domain
 Write 1-2 technical paragraphs (feel free to add images if you would like).
