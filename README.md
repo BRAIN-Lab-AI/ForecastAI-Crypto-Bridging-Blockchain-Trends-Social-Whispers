@@ -18,7 +18,9 @@ The paper mentions that the recent studies have surpassed the univariate price s
 ## Problem Statement
 Write 1-2 technical paragraphs (feel free to add images if you would like).
 
+The paper states that the traditional predicting models often struggle to capture the complex drivers of cryptocurrency markets as they solely depend on the historical prices and volume data of assets. Furthermore, the researchers convey that even existing multimodal techniques face pivotal constraints. The paper integrates financial, blockchain and social media data but also employs comparatively conventional NLP methods and basic fusion strategies. In conclusion, cross modal interactions may be underutilized and external macroeconomic influences are ignored.
 
+This further leads to models that may perform well under stable conditions but lack robustness during turbulent events such as regulatory announcements, global macro shocks or even sudden shifts in investor sentiment. Therefore, according to the paper, a need for forecasting frameworks is required that combine richer data, leverage advanced architectures and provide resilience across different market conditions or environments.
 
 ## Application Area and Project Domain
 Write 1-2 technical paragraphs (feel free to add images if you would like).
