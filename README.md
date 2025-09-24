@@ -32,8 +32,10 @@ Write 1-2 technical paragraphs (feel free to add images if you would like).
 
 The paper tries to demonstrate that incorporating blockchain and social sentiment alongside financial dataa improves the predictive accuracy. The models mentioned in the paper use DL and NLP to integrate the multimodal signals while also showing the benefits of a holistic approach.
 
-I will try to replicate the work done by the authors and extend on its research and implmentation in following ways:
-
+I will try to replicate the work done by the authors and extend on its research and implmentation in terms of both methodological sophistication and practical applicability. The planned improvements include the following:
+1. **Title 1:** Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin commodo a felis eu iaculis. Ut pulvinar semper tellus at ullamcorper. Curabitur lorem augue, pretium a rutrum id, vestibulum et leo.
+2. **Title 2:** Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin commodo a felis eu iaculis. Ut pulvinar semper tellus at ullamcorper. Curabitur lorem augue, pretium a rutrum id, vestibulum et leo.
+3. **Title 3:** Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin commodo a felis eu iaculis. Ut pulvinar semper tellus at ullamcorper. Curabitur lorem augue, pretium a rutrum id, vestibulum et leo.
 
 # THE FOLLOWING IS SUPPOSED TO BE DONE LATER
 
