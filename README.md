@@ -30,6 +30,10 @@ The main application area of this paper is "Forecasting" the assets prices, main
 ## What is the paper trying to do, and what are you planning to do?
 Write 1-2 technical paragraphs (feel free to add images if you would like).
 
+The paper tries to demonstrate that incorporating blockchain and social sentiment alongside financial dataa improves the predictive accuracy. The models mentioned in the paper use DL and NLP to integrate the multimodal signals while also showing the benefits of a holistic approach.
+
+I will try to replicate the work done by the authors and extend on its research and implmentation in following ways:
+
 
 # THE FOLLOWING IS SUPPOSED TO BE DONE LATER
 
