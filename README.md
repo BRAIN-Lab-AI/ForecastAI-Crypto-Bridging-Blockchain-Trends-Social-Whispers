@@ -7,8 +7,6 @@
 - **Affiliations:** KFUPM
 
 ## Introduction
-Write 1-2 technical paragraphs (feel free to add images if you would like).
-
 The paper that I have chosen to work on is "Deep learning and NLP in cryptocurrency forecasting: Integrating financial, blockchain, and social media data" by Gurgul, Lessmann and Härdle. This paper is inspired by the recent events in the cryptocurrency world and is related to cryptocurrency forecasting using application of latest techniques.
 
 With the rapid growth of cryptocurrency markets over the last decade, it has become a center of attention for both Financial Technology (FinTech) enthusiasts and computer scientists due to their high volatility and sensitivity to multifaceted drivers. Contrary to traditional assets, the prices of cryptocurrency get affected by blockchain activity, social media sentiments, and influential individuals' opinions while also getting some influence by financial indicators. Artificial Intelligence (AI) and its applications, like Machine Learning (ML) approaches, have gained notoriety for this domain, specifically Deep Learning (DL) techniques as they can model complicated nonlinear dependencies and exploit the highly dimensional data.
@@ -16,20 +14,14 @@ With the rapid growth of cryptocurrency markets over the last decade, it has bec
 The paper mentions that the recent studies have surpassed the univariate price series to multimodal approaches that integrate heterogeneous signals, such as blockchain data and textual sentiments (social media). Especially, techniques like transformers and advanced Natural Language Processing (NLP) models have demonstrated promising capabilities in extracting nuanced features from text and merging them with numerial predictors. With these state-of-the-art techniques, many opportunities open up to design more robust forecasting frameworks that better adapt to volatile regimes and market shocks.
 
 ## Problem Statement
-Write 1-2 technical paragraphs (feel free to add images if you would like).
-
 The paper states that the traditional predicting models often struggle to capture the complex drivers of cryptocurrency markets as they solely depend on the historical prices and volume data of assets. Furthermore, the researchers convey that even existing multimodal techniques face pivotal constraints. The paper integrates financial, blockchain and social media data but also employs comparatively conventional NLP methods and basic fusion strategies. In conclusion, cross modal interactions may be underutilized and external macroeconomic influences are ignored.
 
 This further leads to models that may perform well under stable conditions but lack robustness during turbulent events such as regulatory announcements, global macro shocks or even sudden shifts in investor sentiment. Therefore, according to the paper, a need for forecasting frameworks is required that combine richer data, leverage advanced architectures and provide resilience across different market conditions or environments.
 
 ## Application Area and Project Domain
-Write 1-2 technical paragraphs (feel free to add images if you would like).
-
 The main application area of this paper is "Forecasting" the assets prices, mainly cryptocurrencies, which is a field of high relevance to crypto enthusiasts, investors, traders and even policymakers. In general, the domain lies at the intersection of DL, FinTech and multimodal data science. Also, the paper leverages blockchain analytics, social media NLP, and financial time series modeling to sow the seeds for forecasts that are both technically rigorous and practically useful. Other than the crypto field, the methods explored in this paper contribute to the wider body of research on multimodal forecasting, highlighting how the heterogeneous data sources can be combined to improve the predictions in complex and dynamic systems.
 
 ## What is the paper trying to do, and what are you planning to do?
-Write 1-2 technical paragraphs (feel free to add images if you would like).
-
 The paper tries to demonstrate that incorporating blockchain and social sentiment alongside financial dataa improves the predictive accuracy. The models mentioned in the paper used DL and NLP to integrate the multimodal signals while also showing the benefits of a holistic approach.
 
 I will not only try to replicate the work done by the authors but also extend on its research and implmentation in terms of both methodological sophistication and practical applicability while demonstrating measurable improvements in accuracy, robustness and real world applicability. This will eventually narrow the gap between the academic forecasting models and decision making tools that could be deployed in live trading environments. The planned improvements might include the following or even more:
