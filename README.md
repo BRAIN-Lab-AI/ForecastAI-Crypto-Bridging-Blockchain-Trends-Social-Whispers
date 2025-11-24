@@ -1,4 +1,4 @@
-# ForecastAI-Crypto-Bridging-Blockchain-Trends-Social-Whispers
+# Experimental Study of Deep Learning Models for Short-Term Crypto Price Forecasting
 
 ## Project Metadata
 ### Authors
