@@ -34,13 +34,13 @@ I will not only try to replicate the work done by the authors but also extend on
 
 ### Project Documents
 - **Presentation:** [Project Presentation](/presentation.pptx)
-- **Report:** [Project Report](/report.pdf)
+- **Report:** [Project Report](/251___ICS_590___202401140.pdf)
 
 ### Reference Paper
-- [High-Resolution Image Synthesis with Latent Diffusion Models](https://arxiv.org/abs/2112.10752)
+- [High-Resolution Image Synthesis with Latent Diffusion Models](/1-s2.0-S0169207025000147-main.pdf)
 
 ### Reference Dataset
-- [LAION-5B Dataset](https://laion.ai/blog/laion-5b/)
+- [LAION-5B Dataset](/csv_files-20251124T112916Z-1-001.zip)
 
 
 ## Project Technicalities
