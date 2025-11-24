@@ -120,6 +120,9 @@ The forecasting workflow follows a structured multistage process:
 2. **Set Up the Environment in Colab:**
     The notebooks are set up in such a way that it should run one by one. Just need to change the path under the heading `Mount Collab and CD`
 
+## Suggestion
+Instead of running the code, since it would take a lot of time, `pkl` files can be used to view quick plots and all other history of the model such as MSE, MAE etc!
+
 ## Acknowledgments
 - **Open-Source Communities:** Gratitude to contributors of TensorFlow, Keras, PyTorch, scikit learn, and related libraries, and Kaggle datasets used in this project.
 - **Individuals:** Special thanks to Dr. Muzammil, family and friends for constant support and guidance throughout the project.
