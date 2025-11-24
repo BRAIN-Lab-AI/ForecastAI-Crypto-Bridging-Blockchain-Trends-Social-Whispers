@@ -47,90 +47,80 @@ I will not only try to replicate the work done by the authors but also extend on
 ## Project Technicalities
 
 ### Terminologies
-- **Diffusion Model:** A generative model that progressively transforms random noise into coherent data.
-- **Latent Space:** A compressed, abstract representation of data where complex features are captured.
-- **UNet Architecture:** A neural network with an encoder-decoder structure featuring skip connections for better feature preservation.
-- **Text Encoder:** A model that converts text into numerical embeddings for downstream tasks.
-- **Perceptual Loss:** A loss function that measures high-level differences between images, emphasizing perceptual similarity.
-- **Tokenization:** The process of breaking down text into smaller units (tokens) for processing.
-- **Noise Vector:** A randomly generated vector used to initialize the diffusion process in generative models.
-- **Decoder:** A network component that transforms latent representations back into image space.
-- **Iterative Refinement:** The process of gradually improving the quality of generated data through multiple steps.
-- **Conditional Generation:** The process where outputs are generated based on auxiliary inputs, such as textual descriptions.
+- **Time Series Forecasting:** Predicting future values in sequential data using historical patterns.
+- **Multimodal Features:** Combining diverse inputs such as price data, Google Trends, news statistics, and macroeconomic indicators.
+- **Technical Indicators:** Engineered features derived from OHLCV data such as RSI, MACD, ATR, and moving averages.
+- **Sequence Model:** A model (LSTM, CNN LSTM, Transformer) that processes temporal windows of data.
+- **Sliding Window:** A technique to convert continuous time series into fixed length sequences for training.
+- **Walk Forward Validation:** Time aware evaluation where the model is trained on past data and tested on a future window.
+- **AUC:** A performance metric used for binary classification tasks such as up or down movement prediction.
+- **Sharpe Ratio:** A measure of risk adjusted returns used to evaluate trading strategies.
+- **Extrema Detection:** Identifying local maxima and minima over short windows as a classification target.
 
 ### Problem Statements
-- **Problem 1:** Achieving high-resolution and detailed images using conventional diffusion models remains challenging.
-- **Problem 2:** Existing models suffer from slow inference times during the image generation process.
-- **Problem 3:** There is limited capability in performing style transfer and generating diverse artistic variations.
+- **Problem 1:** Predicting short term price movements in volatile crypto markets remains difficult due to nonlinear and noisy dynamics.
+- **Problem 2:** Many deep learning studies rely on paid APIs or proprietary sentiment datasets, limiting reproducibility.
+- **Problem 3:** The performance of advanced architectures such as transformers is unclear under limited data density and daily resolution.
 
 ### Loopholes or Research Areas
-- **Evaluation Metrics:** Lack of robust metrics to effectively assess the quality of generated images.
-- **Output Consistency:** Inconsistencies in output quality when scaling the model to higher resolutions.
-- **Computational Resources:** Training requires significant GPU compute resources, which may not be readily accessible.
+- **Evaluation Metrics:** Financial forecasting studies often lack consistent cross task metrics, especially for direction and extrema prediction.
+- **Output Consistency:** Models may overfit high noise crypto data, reducing stability across different market regimes.
+- **Computational Resources:** Training requires significant GPU compute resources, which may not be readily accessible thats why using Collab is one of the options. Also, transformer based models require greater compute and do not always outperform simpler architectures on daily data.
 
 ### Problem vs. Ideation: Proposed 3 Ideas to Solve the Problems
-1. **Optimized Architecture:** Redesign the model architecture to improve efficiency and balance image quality with faster inference.
-2. **Advanced Loss Functions:** Integrate novel loss functions (e.g., perceptual loss) to better capture artistic nuances and structural details.
-3. **Enhanced Data Augmentation:** Implement sophisticated data augmentation strategies to improve the model’s robustness and reduce overfitting.
+1. **Model Architecture Selection:** Evaluate multiple neural architectures (MLP, LSTM, deep LSTM, CNN LSTM, Transformer) to determine which structure best fits short horizon crypto dynamics.
+2. **Enhanced Feature Engineering:** Integrate a broad multimodal feature set including OHLCV derived indicators, Google Trends signals, news headline statistics, and macroeconomic variables.
+3. **Robust Evaluation with Walk Forward Splits:** Apply expanding window validation to simulate real trading conditions and test generalization across evolving market regimes.
 
 ### Proposed Solution: Code-Based Implementation
-This repository provides an implementation of the enhanced stable diffusion model using PyTorch. The solution includes:
+This repository implements the full forecasting pipeline in modular Python scripts. The workflow includes:
 
-- **Modified UNet Architecture:** Incorporates residual connections and efficient convolutional blocks.
-- **Novel Loss Functions:** Combines Mean Squared Error (MSE) with perceptual loss to enhance feature learning.
-- **Optimized Training Loop:** Reduces computational overhead while maintaining performance.
+- **Multimodal Data Acquisition:** Custom scripts collect Kaggle OHLCV, Google News headline metadata, Google Trends indices, and Yahoo Finance macroeconomic series.
+- **Feature Engineering Toolkit:** Generates technical indicators, sentiment proxies, z score transformations, volatility measures, local extrema labels, and binary direction targets.
+- **Models:** Implements MLP, LSTM, deep LSTM, CNN LSTM, and Transformer based models for classification and regression tasks.
+- **Backtesting Engine:** Evaluates trading performance using equity curves, Sharpe ratio, and comparison with buy and hold benchmarks.
 
 ### Key Components
-- **`model.py`**: Contains the modified UNet architecture and other model components.
-- **`train.py`**: Script to handle the training process with configurable parameters.
-- **`utils.py`**: Utility functions for data processing, augmentation, and metric evaluations.
-- **`inference.py`**: Script for generating images using the trained model.
+- **`Data Acquisition.ipynb`**: Handles Kaggle price loading, Google News scraping, Trends data collection, and macroeconomic series processing.
+- **`Fungineering.ipynb`**: Builds technical indicators, sentiment proxies, return features, and supervised learning targets along with the implementations of MLP, LSTM, CNN etc.
 
 ## Model Workflow
-The workflow of the Enhanced Stable Diffusion model is designed to translate textual descriptions into high-quality artistic images through a multi-step diffusion process:
+The forecasting workflow follows a structured multistage process:
 
 1. **Input:**
-   - **Text Prompt:** The model takes a text prompt (e.g., "A surreal landscape with mountains and rivers") as the primary input.
-   - **Tokenization:** The text prompt is tokenized and processed through a text encoder (such as a CLIP model) to obtain meaningful embeddings.
-   - **Latent Noise:** A random latent noise vector is generated to initialize the diffusion process, which is then conditioned on the text embeddings.
+   - **Historical OHLCV Data:** Daily price and volume for BTC and ETH.
+   - **Technical Indicators:** RSI, MACD, ATR, OBV, Bollinger Bands, stochastic oscillator, and moving average ratios.
+   - **News and Trends Features:** Google News headline counts, sentiment proxies, and Google Trends interest indices.
+   - **Macroeconomic Variables:** S&P 500, VIX, and gold prices.
 
-2. **Diffusion Process:**
-   - **Iterative Refinement:** The conditioned latent vector is fed into a modified UNet architecture. The model iteratively refines this vector by reversing a diffusion process, gradually reducing noise while preserving the text-conditioned features.
-   - **Intermediate States:** At each step, intermediate latent representations are produced that increasingly capture the structure and details dictated by the text prompt.
+2. **Processing Pipeline:**
+   - **Sequence Construction:** Sliding windows of 30 to 60 days are created for sequence models.
+   - **Standardization:** Features are z score normalized using training only statistics.
+   - **Target Generation:** Next day direction, local extrema, or regression targets are attached.
 
-3. **Output:**
-   - **Decoding:** The final refined latent representation is passed through a decoder (often part of a Variational Autoencoder setup) to generate the final image.
-   - **Generated Image:** The output is a synthesized image that visually represents the input text prompt, complete with artistic style and detail.
+3. **Modeling:**
+   - LSTM and CNN LSTM models capture temporal structure.
+   - MLP models operate on flattened features for stability under noisy data.
+   - Transformers apply multi head attention for long range dependency modeling.
+
+
+4. **Output:**
+   - **Classification Outputs:** Up or down probabilities or extrema labels.
+   - **Regression Outputs:** Next day normalized closing price.
+   - **Backtest Results:** Equity curve, Sharpe ratio, and performance relative to buy and hold.
 
 ## How to Run the Code
 
 1. **Clone the Repository:**
     ```bash
-    git clone https://github.com/yourusername/enhanced-stable-diffusion.git
-    cd enhanced-stable-diffusion
+    git clone https://github.com/BRAIN-Lab-AI/ForecastAI-Crypto-Bridging-Blockchain-Trends-Social-Whispers.git crypto-forecasting
+    cd crypto-forecasting
     ```
 
-2. **Set Up the Environment:**
-    Create a virtual environment and install the required dependencies.
-    ```bash
-    python3 -m venv venv
-    source venv/bin/activate  # On Windows use: venv\Scripts\activate
-    pip install -r requirements.txt
-    ```
-
-3. **Train the Model:**
-    Configure the training parameters in the provided configuration file and run:
-    ```bash
-    python train.py --config configs/train_config.yaml
-    ```
-
-4. **Generate Images:**
-    Once training is complete, use the inference script to generate images.
-    ```bash
-    python inference.py --checkpoint path/to/checkpoint.pt --input "A surreal landscape with mountains and rivers"
-    ```
+2. **Set Up the Environment in Colab:**
+    The notebooks are set up in such a way that it should run one by one. Just need to change the path under the heading `Mount Collab and CD`
 
 ## Acknowledgments
-- **Open-Source Communities:** Thanks to the contributors of PyTorch, Hugging Face, and other libraries for their amazing work.
-- **Individuals:** Special thanks to bla, bla, bla for the amazing team effort, invaluable guidance and support throughout this project.
-- **Resource Providers:** Gratitude to ABC-organization for providing the computational resources necessary for this project.
+- **Open-Source Communities:** Gratitude to contributors of TensorFlow, Keras, PyTorch, scikit learn, and related libraries, and Kaggle datasets used in this project.
+- **Individuals:** Special thanks to Dr. Muzammil, family and friends for constant support and guidance throughout the project.
+- **Resource Providers:** Gratitude to Google Colab for providing the computational resources necessary for this project for free.
