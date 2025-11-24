@@ -33,7 +33,7 @@ I will not only try to replicate the work done by the authors but also extend on
 # THE FOLLOWING IS SUPPOSED TO BE DONE LATER
 
 ### Project Documents
-- **Presentation:** [Project Presentation](/presentation.pptx)
+- **Presentation:** [Project Presentation](/ICS 590 - 202401140 - Project Presentation.pptx)
 - **Report:** [Project Report](/251___ICS_590___202401140.pdf)
 
 ### Reference Paper
