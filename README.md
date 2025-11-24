@@ -37,10 +37,11 @@ I will not only try to replicate the work done by the authors but also extend on
 - **Report:** [Project Report](/251___ICS_590___202401140.pdf)
 
 ### Reference Paper
-- [High-Resolution Image Synthesis with Latent Diffusion Models](/1-s2.0-S0169207025000147-main.pdf)
+- [Deep learning and NLP in cryptocurrency forecasting: Integrating financial, blockchain, and social media data](/1-s2.0-S0169207025000147-main.pdf)
+- [LINK](https://www.sciencedirect.com/science/article/pii/S0169207025000147)
 
 ### Reference Dataset
-- [LAION-5B Dataset](/csv_files-20251124T112916Z-1-001.zip)
+- [BTC, ETH, Yahoo Finance, Google New and Trends CSV files](/csv_files-20251124T112916Z-1-001.zip)
 
 
 ## Project Technicalities
