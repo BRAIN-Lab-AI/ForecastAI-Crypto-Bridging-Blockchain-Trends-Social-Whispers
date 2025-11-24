@@ -30,8 +30,6 @@ I will not only try to replicate the work done by the authors but also extend on
 3. **Incorporation of various Signals:** A factor that was overlooked in the paper was integrating macroeconomic variables like interest rates, inflation data, stock and global risk indices into the forecasting framework. These features provide a valuable context especially during periods of market shakedown (due to the mentioned factors) and can further improve model robustness.
 4. **Multimodal Fusion Strategies:** The paper makes use of simple concatenation and feature stacking in its models while a better approach could have been the implementation of attention based transformer fusion layers or cross-modal transformers as these architectures dynamically learn the relative importance of different data types over the time and under constantly changing market conditions. This type of architecture will also potentially improve the performance of the framework during high volatility in the market or during market shifting periods.
 
-# THE FOLLOWING IS SUPPOSED TO BE DONE LATER
-
 ### Project Documents
 - **Presentation:** [Project Presentation](/presentation.pptx)
 - **Report:** [Project Report](/251___ICS_590___202401140.pdf)
