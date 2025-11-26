@@ -86,7 +86,7 @@ This repository implements the full forecasting pipeline in Google Colab Noteboo
 - [**`Data_Acquisition.ipynb`**](/Data_Acquisition.ipynb): Handles Kaggle price loading, Google News scraping, Trends data collection, and macroeconomic series processing.
 - [**`Fungineering.ipynb`**](/Fungineering.ipynb): Builds technical indicators, sentiment proxies, return features, and supervised learning targets along with the implementations of MLP, LSTM, CNN etc.
 - [**`Outputs`**](/Outputs): This folder has all the outputs generated from `Fungineering.ipynb`.
-- [**`pkl_files.zip`**](/pkl_files.zip): This zip file has all the `pkl` files for the model, given that if the code takes some time to run/generate results.
+- [**`pkl_files.zip`**](/pkl_files.zip): This zip file has all the `pkl` files for the models, given that if the code takes some time to run/generate results.
 - [**`csv_files.zip`**](/csv_files.zip): This zip file contains all the datasets in CSV form (easy to view) as requested and features engineering file as well.
 - [**`parquet_files.zip`**](/parquet_files.zip): This zip file contains all the datasets used and features engineering file as well. This will be required to be unzipped to use in `Fungineering.ipynb`.
 
