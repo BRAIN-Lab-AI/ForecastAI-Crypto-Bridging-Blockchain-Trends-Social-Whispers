@@ -42,7 +42,7 @@ I will not only try to replicate the work done by the authors but also extend on
 - [BTC, ETH, Yahoo Finance, Google News and Trends CSV files](/csv_files.zip)
 - This zip file contains the dataset as well as the features engineered file.
 - These are not the original datasets from the reference paper as the Reference paper's scholars are bound by the API privacy policies.
-- I found [BTC](https://www.kaggle.com/datasets/priyamchoksi/bitcoin-historical-prices-and-activity-2010-2024?select=bitcoin_2010-07-17_2024-06-28.csv) and [ETH)[https://www.kaggle.com/datasets/priyamchoksi/ethereum-historical-dataset] datasets on Kaggle.
+- I found [BTC](https://www.kaggle.com/datasets/priyamchoksi/bitcoin-historical-prices-and-activity-2010-2024?select=bitcoin_2010-07-17_2024-06-28.csv) and [ETH](https://www.kaggle.com/datasets/priyamchoksi/ethereum-historical-dataset) datasets on Kaggle.
 - As for others i.e. Yahoo Finance, Google News, and Google Trends, I had to get them from their APIs as in the [mentioned code](/Data_Acquisition.ipynb)
 
 
@@ -75,7 +75,7 @@ I will not only try to replicate the work done by the authors but also extend on
 3. **Robust Evaluation with Walk Forward Splits:** Apply expanding window validation to simulate real trading conditions and test generalization across evolving market regimes.
 
 ### Proposed Solution: Code-Based Implementation
-This repository implements the full forecasting pipeline in modular Python scripts. The workflow includes:
+This repository implements the full forecasting pipeline in Google Colab Notebook(s). The workflow includes:
 
 - **Multimodal Data Acquisition:** Custom scripts collect Kaggle OHLCV, Google News headline metadata, Google Trends indices, and Yahoo Finance macroeconomic series.
 - **Feature Engineering Toolkit:** Generates technical indicators, sentiment proxies, z score transformations, volatility measures, local extrema labels, and binary direction targets.
@@ -83,8 +83,12 @@ This repository implements the full forecasting pipeline in modular Python scrip
 - **Backtesting Engine:** Evaluates trading performance using equity curves, Sharpe ratio, and comparison with buy and hold benchmarks.
 
 ### Key Components
-- **`Data Acquisition.ipynb`**: Handles Kaggle price loading, Google News scraping, Trends data collection, and macroeconomic series processing.
-- **`Fungineering.ipynb`**: Builds technical indicators, sentiment proxies, return features, and supervised learning targets along with the implementations of MLP, LSTM, CNN etc.
+- [**`Data_Acquisition.ipynb`**](/Data_Acquisition.ipynb): Handles Kaggle price loading, Google News scraping, Trends data collection, and macroeconomic series processing.
+- [**`Fungineering.ipynb`**](/Fungineering.ipynb): Builds technical indicators, sentiment proxies, return features, and supervised learning targets along with the implementations of MLP, LSTM, CNN etc.
+- [**`Outputs`**](/Outputs): This folder has all the outputs generated from `Fungineering.ipynb`.
+- [**`pkl_files.zip`**](/pkl_files.zip): This zip file has all the `pkl` files for the model, given that if the code takes some time to run/generate results.
+- [**`csv_files.zip`**](/csv_files.zip): This zip file contains all the datasets in CSV form (easy to view) as requested and features engineering file as well.
+- [**`parquet_files.zip`**](/parquet_files.zip): This zip file contains all the datasets used and features engineering file as well. This will be required to be unzipped to use in `Fungineering.ipynb`.
 
 ## Model Workflow
 The forecasting workflow follows a structured multistage process:
