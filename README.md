@@ -51,6 +51,7 @@ I will not only try to replicate the work done by the authors but also extend on
 ### Terminologies
 - **Time Series Forecasting:** Predicting future values in sequential data using historical patterns.
 - **Multimodal Features:** Combining diverse inputs such as price data, Google Trends, news statistics, and macroeconomic indicators.
+- **OHLCV:** Acronym for Open, High, Low, Close and Volume for crypto prices.
 - **Technical Indicators:** Engineered features derived from OHLCV data such as RSI, MACD, ATR, and moving averages.
 - **Sequence Model:** A model (LSTM, CNN LSTM, Transformer) that processes temporal windows of data.
 - **Sliding Window:** A technique to convert continuous time series into fixed length sequences for training.
@@ -85,7 +86,7 @@ This repository implements the full forecasting pipeline in Google Colab Noteboo
 ### Key Components
 - [**`Data_Acquisition.ipynb`**](/Data_Acquisition.ipynb): Handles Kaggle price loading, Google News scraping, Trends data collection, and macroeconomic series processing.
 - [**`Fungineering.ipynb`**](/Fungineering.ipynb): Builds technical indicators, sentiment proxies, return features, and supervised learning targets along with the implementations of MLP, LSTM, CNN etc.
-- [**`Outputs`**](/Outputs): This folder has all the outputs generated from `Fungineering.ipynb`.
+- [**`Outputs`**](/Outputs): This folder has all the outputs generated from `Fungineering.ipynb` in the PDF files for each main cell as named. I tried to add them to the Appendix but the main report was then going to be a lengthy one.
 - [**`pkl_files.zip`**](/pkl_files.zip): This zip file has all the `pkl` files for the models, given that if the code takes some time to run/generate results.
 - [**`csv_files.zip`**](/csv_files.zip): This zip file contains all the datasets in CSV form (easy to view) as requested and features engineering file as well.
 - [**`parquet_files.zip`**](/parquet_files.zip): This zip file contains all the datasets used and features engineering file as well. This will be required to be unzipped to use in `Fungineering.ipynb`.
