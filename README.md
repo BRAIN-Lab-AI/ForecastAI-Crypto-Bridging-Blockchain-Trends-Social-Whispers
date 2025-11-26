@@ -39,7 +39,11 @@ I will not only try to replicate the work done by the authors but also extend on
 - [LINK](https://www.sciencedirect.com/science/article/pii/S0169207025000147)
 
 ### Reference Dataset
-- [BTC, ETH, Yahoo Finance, Google New and Trends CSV files](/csv_files-20251124T112916Z-1-001.zip)
+- [BTC, ETH, Yahoo Finance, Google News and Trends CSV files](/csv_files.zip)
+- This zip file contains the dataset as well as the features engineered file.
+- These are not the original datasets from the reference paper as the Reference paper's scholars are bound by the API privacy policies.
+- I found [BTC](https://www.kaggle.com/datasets/priyamchoksi/bitcoin-historical-prices-and-activity-2010-2024?select=bitcoin_2010-07-17_2024-06-28.csv) and [ETH)[https://www.kaggle.com/datasets/priyamchoksi/ethereum-historical-dataset] datasets on Kaggle.
+- As for others i.e. Yahoo Finance, Google News, and Google Trends, I had to get them from their APIs as in the [mentioned code](/Data_Acquisition.ipynb)
 
 
 ## Project Technicalities
