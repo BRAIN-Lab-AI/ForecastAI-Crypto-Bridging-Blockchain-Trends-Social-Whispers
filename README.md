@@ -33,6 +33,7 @@ I will not only try to replicate the work done by the authors but also extend on
 ### Project Documents
 - **Presentation:** [Project Presentation](/presentation.pptx)
 - **Report:** [Project Report](/251___ICS_590___202401140.pdf)
+- **Latex:** [Report Latex](/251___ICS_590___202401140_Latex.zip)
 
 ### Reference Paper
 - [Deep learning and NLP in cryptocurrency forecasting: Integrating financial, blockchain, and social media data](/1-s2.0-S0169207025000147-main.pdf)
